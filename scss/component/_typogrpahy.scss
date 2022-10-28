@@ -1,0 +1,13 @@
+@use '../custom' as *;
+// @use '../component/mixins' ;
+@import '../component/mixins';
+
+
+.heros{
+    font-family: 'Rozha One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 136px;
+    text-align: center;
+}

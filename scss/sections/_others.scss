@@ -1,0 +1,209 @@
+// @use '../custom' as *;
+
+
+// @media (max-width:800px) {
+
+//     .nav-links {
+//         display: flex;
+//         align-items: flex-start;
+//         flex-direction: column;
+//         gap: 5px !important;
+//         position: absolute;
+//         background: $primary;
+//         top: -50rem;
+//         left: 0;
+//         width: 100%;
+//         z-index: 99 !important;
+//         transition: 1s ease-in-out;
+
+//         &.showMenu {
+//             top: 80px;
+//         }
+
+//         li {
+//             // padding: 1rem 0 1rem 2rem;
+//             width: 100%;
+//             padding-bottom: .5rem;
+//         }
+
+//         a {
+//             border-bottom: 1px solid rgb($white, .1);
+//             width: 100%;
+//             display: inline-block;
+//             padding: .7rem;
+//             // opacity: .7;
+//         }
+//     }
+
+
+//     .btns-1 {
+//         display: none;
+//     }
+
+//     .md-btn {
+//         text-align: center;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         margin: .7rem;
+//     }
+
+
+//     .menu-btn {
+//         display: block !important;
+
+//     }
+
+//     header {
+
+//         .slider {
+//             .content {
+//                 .author {
+
+//                     font-family: "Rozha One";
+//                     font-size: 50px;
+//                     line-height: 52px;
+//                 }
+
+//                 .info {
+//                     font-size: 16px;
+//                     line-height: 21px;
+//                 }
+
+//                 .pagination {
+//                     position: fixed;
+//                     bottom: -12rem;
+//                     right: -0%;
+//                     transform: translateY(-50%);
+//                     text-align: center;
+//                     overflow: hidden;
+//                 }
+//             }
+
+//             .img {
+//                 img {
+//                     height: 100vh;
+//                     object-fit: cover;
+//                 }
+//             }
+//         }
+
+//         .buttons {
+//             display: flex;
+//             align-items: flex-start;
+//             justify-content: baseline;
+//             flex-direction: row;
+//             bottom: 15.55rem;
+//             left: 2.5rem;
+//             z-index: 0;
+
+
+//             .md-btn-1 {
+//                 display: block;
+//                 font-size: .9rem;
+//                 margin-bottom: .8rem;
+//             }
+
+//             .md-btn-2 {
+//                 font-size: .9rem;
+
+//             }
+//         }
+
+//         .socials {
+//             position: absolute;
+//             bottom: 4.55rem;
+//             left: 2.5rem;
+//             z-index: 5;
+//         }
+//     }
+
+
+//     // latest-cards
+
+//     .latest-cards {
+//         display: flex !important;
+
+//         gap: 30px;
+//         width: 350px;
+//         // overflow-x: auto;
+//         margin: 0 auto;
+//         margin-bottom: 1rem;
+
+//         .latest-card {
+//             animation: slider 40000ms 200ms linear infinite alternate;
+//             // overflow-x: scroll;
+
+//             h3 {
+//                 font-weight: 600;
+//                 font-size: 1.2rem !important;
+//                 line-height: 28px;
+//                 padding: 1rem 0 .5rem 0;
+//                 width: 285px;
+//             }
+//         }
+//     }
+
+//     .paused {
+//         animation-play-state: paused !important;
+//         animation: slider 40000ms 200ms linear infinite alternate;
+//     }
+
+//     .unlimited-ads {
+//         height: 40vh;
+//         display: flex;
+//         align-items: center;
+//         justify-content: flex-start;
+
+
+//         .back-sharp {
+//             position: absolute;
+//             width: 220px !important;
+//             height: 40vh;
+//             top: 0;
+//             left: 0;
+//             background: #030303;
+//         }
+
+//         .slant-sharp {
+//             // display: block;
+//             position: absolute;
+//             top: -20px;
+//             // right: 50% ;
+//         }
+
+
+//         .content {
+//             position: relative;
+//             width: 100%;
+//             margin: auto 0;
+//             z-index: 10;
+//             display: flex;
+//             align-items: flex-start;
+//             justify-content: center;
+//             flex-direction: column;
+
+
+//         }
+
+//     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// }

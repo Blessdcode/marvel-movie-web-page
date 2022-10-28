@@ -1,0 +1,52 @@
+@use '../custom' as *;
+
+@import '../component/mixins';
+
+
+.latest-news {
+    position: relative;
+
+    .news {
+        display: flex;
+        justify-content: space-between;
+
+        .news-col {
+            // display: flex;
+            // justify-content: flex-end;
+            // align-items: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+
+            .news-row {
+                display: flex;
+                text-align: start;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                cursor: pointer;
+                // gap: 30px;
+
+                &:hover p{
+                    color: $secondary;
+                }
+
+                .img {
+                    // width: 100%;
+                    border: 1px solid $gray-700;
+
+                    img {
+                        width: 100%;
+                        cursor: pointer;
+
+                    }
+                }
+
+                p {
+                    width: 50%;
+                    text-align: start;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

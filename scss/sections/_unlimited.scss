@@ -1,0 +1,175 @@
+@use '../custom' as *;
+// @use '../component/mixins' ;
+@import '../component/mixins';
+
+
+.unlimited-ads {
+    height: 50vh;
+    background-image: url(/images/unli-image.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 5rem 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 3rem;
+    overflow: hidden;
+
+
+
+    @include media-breakpoint-down(md) {
+        justify-content: center;
+    }
+
+    &::after {
+        content: '';
+        width: 100%;
+        background: rgba(2, 2, 2, 0.493);
+        backdrop-filter: blur(2px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .back-sharp {
+        position: absolute;
+        width: 620px;
+        height: 50vh;
+        top: 0;
+        left: 0;
+        background: #030303;
+        overflow: hidden;
+    }
+
+    .slant-sharp {
+        // display: block;
+        position: absolute;
+        top: -20px;
+        right: 50%;
+
+
+        @include media-breakpoint-down(sm) {
+            position: absolute;
+            right: 10%;
+        }
+
+        img {
+            // background-color: #FFFFFF;
+            padding: 20px;
+            height: 55vh;
+
+            @include media-breakpoint-down(sm) {
+                height: 45vh;
+            }
+        }
+    }
+
+
+    .content {
+        position: relative;
+        width: 100%;
+        margin: auto 0;
+        z-index: 10;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+
+
+        h2 {
+            font-family: 'Rozha One';
+            font-weight: 500;
+            font-size: 3.5rem;
+            line-height: 3.8rem;
+
+            @include media-breakpoint-down(md) {
+                font-size: 2.5rem !important;
+                line-height: 3rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.7rem !important;
+                line-height: 2rem;
+            }
+        }
+
+        p {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.5rem;
+            line-height: 38px;
+            width: 70%;
+
+            @include media-breakpoint-down(md) {
+                font-size: 1rem;
+                line-height: 28px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: .8555rem;
+                line-height: 18px;
+            }
+
+        }
+    }
+
+}
+
+.cover {
+    background-image: url(/images/unli-image-2.png);
+}
+
+
+.unilimited-comic {
+    background: #FFFFFF;
+    // height: 554px;
+
+    .comic {
+
+        .comic-info {
+            // text-align: start;
+
+            h4 {
+                font-weight: 500;
+                font-size: 1.1rem;
+
+                @include media-breakpoint-down(md) {
+                    font-size: 1rem;
+                    line-height: 28px;
+                }
+
+            }
+
+            h3 {
+                font-weight: 400;
+                font-size: 1.3rem;
+                margin: 0;
+                margin-top: 1rem;
+                
+                @include media-breakpoint-down(md) {
+                    margin-top: 0rem !important;
+                    font-size: 1rem;
+                    line-height: 28px;
+                }
+
+            }
+        }
+
+
+        img {
+            box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+        }
+
+        &:hover .comic-info {
+            color: $secondary;
+        }
+
+    }
+}

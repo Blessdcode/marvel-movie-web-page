@@ -1,0 +1,120 @@
+@use '../custom' as *;
+
+@import '../component/mixins';
+
+
+
+.trailers {
+    margin: 5rem 0;
+
+
+    .trailer-video {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        // justify-content: flex-end;
+        // flex-direction: column;
+
+
+        .trailer-1 {
+
+
+            h3 {
+                font-weight: 500;
+                font-size: 34px;
+                line-height: 30px;
+                color: #FFFFFF;
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 23px;
+                color: #FFFFFF;
+            }
+
+            .img {
+                position: relative;
+                color: #FFFFFF;
+
+                img {
+                    width: 100%;
+                }
+
+                a {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    i {
+                        cursor: pointer;
+                        color: #FFFFFF;
+                        font-size: 4rem;
+
+                    }
+                }
+            }
+        }
+
+        .trailer-2 {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+
+            .trail {
+                .img {
+                    position: relative;
+                    color: #FFFFFF;
+
+
+                    a {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        i {
+                            cursor: pointer;
+                            color: #FFFFFF;
+                            font-size: 2rem;
+
+                        }
+                    }
+                }
+
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 23px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+    }
+
+
+    .border-anim {
+        position: absolute;
+        width: 4.5rem;
+        height: 4.5rem;
+        border: 0.45rem solid $white;
+        border-radius: 50%;
+        top: -4px;
+        left: -5px;
+        animation: pluse 1.5s linear infinite;
+
+        &.border-1 {
+            animation-delay: 1s;
+        }
+
+        &.border-2 {
+            animation-delay: 1.5s;
+        }
+    }
+}

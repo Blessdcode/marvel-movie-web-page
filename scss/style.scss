@@ -1,0 +1,38 @@
+// customs
+
+@use 'custom';
+
+// component
+
+@use './component/anima';
+@use './component/buttons';
+@use './component/mixins';
+@use './component/typogrpahy';
+
+
+// sections
+
+@use './sections/header';
+@use './sections/footer';
+@use './sections/intros';
+@use './sections/news';
+@use './sections/others';
+@use './sections/navbar';
+@use './sections/latest-release';
+@use './sections/marvel-heros';
+@use './sections/news-letter';
+@use './sections/trailers';
+@use './sections/unlimited';
+@use './sections/responsive';
+
+
+// font family
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+
+body{
+    font-family: 'Rozha One', serif;
+    font-family: 'Roboto', sans-serif;
+    background: #000;
+}

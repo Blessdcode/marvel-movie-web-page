@@ -1,0 +1,130 @@
+@use '../custom' as *;
+
+@import '../component/mixins';
+
+
+
+footer {
+    background-color: $gray;
+    color: $white !important;
+
+    .logo {
+        text-align: center;
+
+        @include media-breakpoint-down(md) {
+            padding-left: 1.5rem;
+            text-align: start;
+        }
+
+        img {
+            padding: 2rem 0;
+
+        }
+    }
+
+
+    .company-list {
+        margin-bottom: 15px;
+        align-items: baseline;
+
+        li {
+            list-style: none;
+            margin-bottom: 1rem;
+
+            a {
+                font-size: 1.3rem;
+                color: #fff !important;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: rgba(255, 255, 255, 0.5) !important;
+                }
+            }
+        }
+    }
+
+    .useful-link {
+
+
+
+        .inside-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            @include media-breakpoint-down(md) {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: baseline;
+                padding-left: 1.5rem;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 26px;
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+    .socials {
+        @include media-breakpoint-down(md) {
+            // margin-top: 1rem;
+            padding-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        h4 {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+            text-transform: uppercase;
+
+            @include media-breakpoint-down(md) {
+                font-size: 16px;
+            }
+        }
+
+        .icons {
+            i {
+                font-size: 1.8rem;
+                margin-right: .7rem;
+                margin-top: .7rem;
+                color: $gray-500;
+                cursor: pointer;
+                
+                &:hover{
+                    color: $secondary;
+                }
+
+                @include media-breakpoint-down(md) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .other-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 2.4rem;
+
+        a {
+            color: $gray-500;
+            text-decoration: none;
+
+            @include media-breakpoint-down(md) {
+                font-size: 14px;
+            }
+
+            &:hover {
+                color: $gray-700;
+            }
+        }
+    }
+}

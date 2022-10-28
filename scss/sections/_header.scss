@@ -1,0 +1,220 @@
+@use '../custom' as *;
+
+
+header {
+    position: relative;
+    height: 100vh;
+    color: $white;
+    overflow: hidden;
+
+
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $white;
+        padding: 2.5rem 0;
+        position: relative;
+        z-index: 1;
+
+        .logo {
+            height: 54px;
+            width: 94px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+
+        .nav-links {
+            display: flex;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 35px;
+
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                color: $white;
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 1.1345rem;
+                line-height: 28px;
+                @include transition;
+
+                &:hover {
+                    color: $secondary;
+                }
+            }
+        }
+
+    }
+
+
+    .menu-btn {
+        position: relative;
+        z-index: 1;
+        right: 1rem;
+        top: 1rem;
+        cursor: pointer;
+        display: none;
+
+        .nav-icon {
+            position: absolute;
+            right: 0;
+            top: -2.2rem;
+            font-size: 2rem;
+            width: 32px;
+            height: 4px;
+            background-color: $white;
+            cursor: pointer;
+            transition: 1s ease-in-out;
+
+
+            &::after {
+                content: '';
+                width: 32px;
+                height: 4px;
+                background-color: $white;
+                cursor: pointer;
+                position: absolute;
+                top: .6rem;
+
+            }
+
+            &::before {
+                content: '';
+                width: 32px;
+                height: 4px;
+                background-color: $white;
+                position: absolute;
+                cursor: pointer;
+                top: -.6rem;
+
+            }
+
+            // &:hover{
+            //     transform: rotate(90deg);
+            // }
+        }
+    }
+
+
+    // js slider
+
+    .slider {
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transition: all .6s;
+        user-select: none;
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 38%;
+            transform: translate(-50%, -50%);
+
+            .author {
+                font-family: 'Rozha One';
+                // font-weight: 400;
+                font-size: 100px;
+                line-height: 142px;
+            }
+
+            .info {
+                font-family: 'Roboto';
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 42px;
+
+            }
+
+            .pagination {
+                position: fixed;
+                bottom: -10rem;
+                right: -25rem;
+                text-align: center;
+                overflow: hidden;
+
+                @include media-breakpoint-up(lg) {
+                    //   display: none !important;
+                    right: -5rem;
+                }
+
+                .prev,
+                .next {
+                    font-size: 3rem;
+                    // margin: 4rem;
+                    cursor: pointer;
+                }
+
+                span {
+                    font-size: 1.5rem;
+                    margin-right: 1rem;
+                    margin-left: 1rem;
+                    cursor: pointer;
+                }
+
+                .pagin-active {
+                    color: $secondary;
+                    font-size: 3.5rem;
+                    position: relative;
+                    top: -20px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .img {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            transition: all .6s;
+            user-select: none;
+            overflow: hidden;
+
+
+
+            img {
+                width: 100%;
+                user-select: none;
+            }
+        }
+    }
+
+    .buttons {
+        position: absolute;
+        bottom: 11.55rem;
+        left: 7rem;
+    }
+
+    .socials {
+        position: absolute;
+        bottom: 2.55rem;
+        left: 7rem;
+        z-index: 5;
+
+        i {
+            font-size: 1.8rem;
+            margin: 0 .4rem;
+            opacity: .5;
+            cursor: pointer;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                color: $secondary;
+                opacity: 1;
+                transform: translateY(-4px);
+            }
+        }
+    }
+}

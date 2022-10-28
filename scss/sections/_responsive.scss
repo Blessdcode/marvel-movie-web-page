@@ -1,0 +1,537 @@
+@use '../custom' as *;
+
+@include media-breakpoint-down(md) {
+    // font-size: 1rem;
+
+    .nav-links {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px !important;
+        position: absolute;
+        background: $primary;
+        top: -50rem;
+        left: 0;
+        width: 100%;
+        z-index: 99 !important;
+        transition: 1s ease-in-out;
+
+        &.showMenu {
+            top: 80px;
+        }
+
+        li {
+            width: 100%;
+            padding-bottom: .5rem;
+        }
+
+        a {
+            border-bottom: 1px solid rgb($white, .1);
+            width: 100%;
+            display: inline-block;
+            padding: .7rem;
+        }
+    }
+
+
+    .btns-1 {
+        display: none;
+    }
+
+    .md-btn {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: .7rem;
+    }
+
+
+    .menu-btn {
+        display: block !important;
+
+    }
+
+    header {
+
+        .slider {
+            .content {
+                .author {
+
+                    font-family: "Rozha One";
+                    font-size: 50px;
+                    line-height: 52px;
+                }
+
+                .info {
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+
+                .pagination {
+                    position: fixed;
+                    bottom: -13rem;
+                    right: 0%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                    overflow: hidden;
+                    display: none;
+
+                    i {
+                        font-size: 2rem !important;
+                    }
+                }
+            }
+
+            .img {
+                img {
+                    height: 100vh;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .swiper-btn {
+            display: flex;
+            align-items: flex-start;
+            justify-content: baseline;
+            flex-direction: row;
+            bottom: 9.55rem;
+            left: 1.5rem;
+            z-index: 0;
+
+            @include media-breakpoint-down(sm) {
+                flex-direction: column !important;
+                bottom: 4.55rem !important;
+                left: 1.5rem;
+            }
+
+
+            .md-btn-1 {
+                display: block;
+                font-size: .9rem;
+                margin-bottom: .8rem;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: .6555rem !important;
+                    margin-bottom: .7rem;
+                }
+            }
+
+            .md-btn-2 {
+                font-size: .9rem;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: .6555rem !important;
+                    margin-bottom: .7rem;
+                }
+
+            }
+        }
+
+        .socials {
+            position: absolute;
+            bottom: 4.55rem;
+            left: 2.5rem;
+            z-index: 5;
+
+            @include media-breakpoint-down(sm) {
+                bottom: 1rem !important;
+            }
+        }
+    }
+
+
+    // latest-cards
+
+    .latest-cards {
+        display: flex !important;
+        gap: 30px;
+        width: 350px;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        overflow: hidden;
+
+
+
+        .latest-card {
+            animation: slider 40000ms 200ms linear infinite alternate;
+
+            h3 {
+                font-weight: 600;
+                font-size: 1.2rem !important;
+                line-height: 28px;
+                padding: 1rem 0 .5rem 0;
+                width: 285px;
+            }
+        }
+    }
+
+    .pause {
+        gap: 0px !important;
+        overflow: hidden;
+        overflow-x: scroll;
+        scroll-snap-align: x mandatory;
+
+        .paused {
+            scroll-snap-type: center;
+            width: 350px;
+            animation: none !important;
+
+            // overflow-x: scroll;
+            &:hover {
+                transform: translateY(0px) !important;
+            }
+
+        }
+    }
+
+    // unlimited
+
+    .unlimited-ads {
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+
+        .back-sharp {
+            position: absolute;
+            width: 220px !important;
+            height: 40vh;
+            top: 0;
+            left: 0;
+            background: #030303;
+        }
+
+        .slant-sharp {
+            position: absolute;
+            top: -20px;
+        }
+
+
+        .content {
+            position: relative;
+            width: 100%;
+            margin: auto 0;
+            z-index: 10;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+
+
+        }
+
+    }
+
+    // latest-news
+
+    .news-col {
+        grid-template-columns: 1fr !important;
+
+        .news-row {
+            flex-direction: column;
+
+            p {
+                width: 100% !important;
+                margin-top: 10px !important;
+            }
+        }
+    }
+
+    // news-letter
+
+    .marvel-insider {
+        //   padding-bottom: 0rem !important;
+
+        h3 {
+            font-size: 22px !important;
+            line-height: 38px;
+            text-align: center;
+            color: $secondary ;
+            text-transform: uppercase;
+        }
+
+        h4 {
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 30px !important;
+            line-height: 47px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 20px !important;
+            line-height: 35px;
+        }
+    }
+
+
+
+
+
+
+    .trailers {
+        margin: 3rem 0;
+
+
+        .trailer-video {
+            display: flex;
+            align-items: flex-start;
+            // justify-content: flex-end;
+            flex-direction: column;
+
+
+            .trailer-1 {
+
+
+                h3 {
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 30px;
+                    color: #FFFFFF;
+                }
+
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 23px;
+                    color: #FFFFFF;
+                }
+
+                .img {
+                    position: relative;
+                    color: #FFFFFF;
+
+                    img {}
+
+                    a {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        i {
+                            cursor: pointer;
+                            color: #FFFFFF;
+                            font-size: 2rem;
+
+                        }
+                    }
+                }
+            }
+
+            .trailer-2 {
+                margin-top: 1.3rem;
+
+                img {
+                    width: 100%;
+                }
+
+                .trail {
+                    .img {
+                        position: relative;
+                        color: #FFFFFF;
+
+                        img {
+                            width: 100%;
+                        }
+
+                        a {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+
+                            i {
+                                font-size: 2rem;
+
+                            }
+                        }
+                    }
+
+                    p {
+                        font-size: 12px;
+                        margin-top: .8rem;
+                        line-height: 23px;
+                    }
+                }
+            }
+
+        }
+
+        .border-anim {
+            position: absolute;
+            width: 2.5rem;
+            height: 2.5rem;
+            border: 0.45rem solid $white;
+            border-radius: 50%;
+            top: -4px;
+            left: -5px;
+            animation: pluse 1.5s linear infinite;
+
+            &.border-1 {
+                animation-delay: 1s;
+            }
+
+            &.border-2 {
+                animation-delay: 1.5s;
+            }
+        }
+
+    }
+
+
+    footer {
+        .company-list {
+            margin-bottom: 15px;
+            align-items: baseline;
+
+            li {
+                list-style: none;
+                margin-bottom: 1rem;
+
+                a {
+                    font-size: 1rem;
+                    color: #fff !important;
+                    text-decoration: none;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        color: rgba(255, 255, 255, 0.5) !important;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@include media-breakpoint-down(lg) {
+
+    .nav-links {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px !important;
+        position: absolute;
+        background: $primary;
+        top: -50rem;
+        left: 0;
+        width: 100%;
+        z-index: 99 !important;
+        transition: 1s ease-in-out;
+
+        &.showMenu {
+            top: 80px;
+        }
+
+        li {
+            width: 100%;
+            padding-bottom: .5rem;
+        }
+
+        a {
+            border-bottom: 1px solid rgb($white, .1);
+            width: 100%;
+            display: inline-block;
+            padding: .7rem;
+        }
+    }
+
+
+    .btns-1 {
+        display: none;
+    }
+
+    .md-btn {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: .7rem;
+    }
+
+
+    .menu-btn {
+        display: block !important;
+
+    }
+
+    header {
+
+        .slider {
+            .content {
+                .author {
+
+                    font-family: "Rozha One";
+                    font-size: 50px;
+                    line-height: 52px;
+                }
+
+                .info {
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+
+                .pagination {
+                    position: fixed;
+                    bottom: -13rem;
+                    right: 0%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                    overflow: hidden;
+                    display: none;
+
+                    i {
+                        font-size: 2rem !important;
+                    }
+                }
+            }
+
+            .img {
+                img {
+                    height: 100vh;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .swiper-btn {
+            display: flex;
+            align-items: flex-start;
+            justify-content: baseline;
+            flex-direction: row;
+            bottom: 9.55rem;
+            left: 1.5rem;
+            z-index: 0;
+
+
+            .md-btn-1 {
+                display: block;
+                font-size: .9rem;
+                margin-bottom: .8rem;
+            }
+
+            .md-btn-2 {
+                font-size: .9rem;
+
+            }
+        }
+
+        .socials {
+            position: absolute;
+            bottom: 4.55rem;
+            left: 2.5rem;
+            z-index: 5;
+        }
+    }
+}
+
+@include media-breakpoint-up(xlg){
+    
+}

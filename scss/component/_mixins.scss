@@ -1,0 +1,37 @@
+@use '../custom' as *;
+
+
+@mixin transition {
+    transition: .4s ease-in-out;
+
+}
+
+@mixin gradient-1 {
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
+
+@keyframes slider {
+    0% {
+        transform: translateX(0);
+
+    }
+
+    100% {
+        transform: translateX(-2150px);
+    }
+}
+
+
+@keyframes pluse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}

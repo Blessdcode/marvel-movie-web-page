@@ -1,0 +1,75 @@
+@use '../custom' as *;
+// @use '../mixins' as *;
+@use '../component/mixins';
+
+
+.btns-1 {
+    // height: 60px;
+    border: 1px solid $secondary;
+    // width: 116px;
+    border-radius: 8px;
+    padding: 12px 22px 12px 22px;
+    background: $secondary;
+    color: $white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: .4s ease-out;
+    position: relative;
+    z-index: 1;
+
+
+    &:hover {
+        background: $hover;
+        color: $white !important;
+        border: 1px solid $hover;
+    }
+}
+
+.btns-2 {
+    border: 1px solid $white;
+    border-radius: 8px;
+    // height: 60px;
+    // width: 165px;
+    padding: 12px 22px 12px 22px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: $white;
+    display: inline-block;
+    margin: 0 8px;
+    transition: .4s ease-in-out;
+    position: relative;
+    z-index: 1;
+
+
+    &:hover {
+        background: $secondary;
+        color: $white !important;
+        border: 1px solid $secondary;
+
+    }
+
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 14px 28px;
+    gap: 14px;
+    border: 1px solid $white;
+    border-radius: 8px !important;
+    background: transparent;
+    color: $white;
+
+    &:hover {
+        background: $secondary;
+
+    }
+
+    @include media-breakpoint-down(md) {
+        padding: 12px !important;
+        font-size: 14px !important;
+        gap: 0px;
+    }
+}
