@@ -94,7 +94,10 @@ prevEl.addEventListener("click", function () {
 // }, 3000)
 
 setInterval(() => {
-timeOut = currentItem++
+currentItem++
+    if (currentItem >= reviews.length) {
+        currentItem = 0
+    }
     showPerson(currentItem)
 }, 3000)
 
